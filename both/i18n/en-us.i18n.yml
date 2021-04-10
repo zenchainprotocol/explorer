@@ -25,7 +25,7 @@ common:
     rewards: 'Rewards'
     bondedTokens: 'Bonded Tokens'
 navbar:
-    siteName: 'BIG DIPPER'
+    siteName: 'ZenScan'
     version: '-'
     validators: 'Validators'
     blocks: 'Blocks'
@@ -42,7 +42,7 @@ navbar:
     simChinese: "中文（简）"
     portuguese: "Português"
     license: 'LICENSE'
-    forkMe: 'Fork me!'
+    forkMe: 'Github'
 consensus:
     consensusState: 'Consensus State'
     round: 'Round'
