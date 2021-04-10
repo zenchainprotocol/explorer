@@ -41,7 +41,7 @@ export default class Block extends Component{
     render(){
         if (this.props.loading){
             return <Container id="block">
-                <Spinner type="grow" color="primary" />
+                <Spinner type="border" color="primary" />
             </Container>
         }
         else{

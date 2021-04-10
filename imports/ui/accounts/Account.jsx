@@ -274,7 +274,7 @@ export default class AccountDetails extends Component{
         if (this.state.loading){
             return <div id="account">
                 <h1 className="d-none d-lg-block"><T>accounts.accountDetails</T></h1>
-                <Spinner type="grow" color="primary" />
+                <Spinner type="border" color="primary" />
             </div>
         }
         else if (this.state.accountExists){

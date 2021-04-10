@@ -602,7 +602,7 @@ class LedgerButton extends Component {
                         <div>See your activities at <Link to={`/account/${this.state.user}`}>your account page</Link>.</div>
                     </TabPane>
                 </TabContent>
-                {this.state.loading?<Spinner type="grow" color="primary" />:''}
+                {this.state.loading?<Spinner type="border" color="primary" />:''}
                 <p className="error-message">{this.state.errorMessage}</p>
             </ModalBody>
             <ModalFooter>

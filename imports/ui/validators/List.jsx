@@ -78,7 +78,7 @@ export default class List extends Component{
 
     render(){
         if (this.props.loading){
-            return <Spinner type="grow" color="primary" />
+            return <Spinner type="border" color="primary" />
         }
         else{
             return (

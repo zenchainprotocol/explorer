@@ -40,7 +40,7 @@ export default class Consensus extends Component{
 
     render(){
         if (this.props.loading){
-            return <Spinner type="grow" color="primary" />
+            return <Spinner type="border" color="primary" />
         }
         else{
             if (this.props.consensusExist && this.props.consensus.prevotes){

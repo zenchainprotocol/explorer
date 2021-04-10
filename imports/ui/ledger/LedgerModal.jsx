@@ -108,7 +108,7 @@ class LedgerModal extends React.Component {
                             <T>accounts.toLoginAs</T> <strong className="text-primary d-block">{this.state.address}</strong><T>accounts.pleaseAccept</T>
                         </TabPane>
                     </TabContent>
-                    {this.state.loading?<Spinner type="grow" color="primary" />:''}
+                    {this.state.loading?<Spinner type="border" color="primary" />:''}
                     <p className="error-message">{this.state.errorMessage}</p>
                 </ModalBody>
                 <ModalFooter>

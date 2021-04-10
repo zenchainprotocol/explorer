@@ -147,7 +147,7 @@ export default class ChainStatus extends React.Component {
 
     render(){
         if (this.props.loading){
-            return <Spinner type="grow" color="primary" />
+            return <Spinner type="border" color="primary" />
         }
         else {
             if (this.props.statusExist && this.props.status.prevotes){

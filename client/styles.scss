@@ -1,12 +1,41 @@
-$forbole-red: #bd081c;
-$primary: $forbole-red !default;
+$primary: #35d398 !default;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
-@import "materia/variables";
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Round');
+//@import "materia/variables";
 @import "bootstrap";
-@import "materia/bootswatch";
+//@import "materia/bootswatch";
+
+//bootstrap them
+
+.card{
+    background-color: #fff;
+    border: 1px solid #eff2f5;
+    border-radius: .65rem;
+    .card-header{
+        display: -webkit-flex;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-wrap: wrap;
+        background-color: transparent;
+        border-bottom: none;
+    }
+}
+.dropdown-menu.show{
+    border-radius: .65rem;
+    background-color: #fff;
+    box-shadow: 0 0 50px 0 #523f6926;
+    border: none;
+}
+///end
 
 body {
     font-size: inherit !important;
+   font-family: 'Poppins', sans-serif;
+   // font-family: 'Varela Round', sans-serif;
+       background-color: #fbf9f6;
   }
   
   .no-select {
@@ -55,10 +84,12 @@ body {
       box-shadow: none;
     }
   
-    .btn {
-      position: absolute;
-      right: -1.74em;
-      top: -0.35em;
+    .btn, .btn:active {
+        position: absolute;
+        right: -1.74em;
+        top: -0.35em;
+        background: none;
+        border: none;
     }
   }
   
@@ -137,8 +168,8 @@ body {
   }
   
   a.navbar-brand .logo {
-    max-height: 40px;
-    max-width: 40px;
+    max-height: 100px;
+    //max-width: 40px;
   }
   
   #header-search {
@@ -146,8 +177,10 @@ body {
     margin-right: 0.5rem;
   
     .form-control {
-      height: auto;
-      padding: 0.5rem 0;
+        height: auto;
+        border-radius: 10rem;
+        font-size: 0.7rem;
+        height: 2.5rem;
     }
   }
   
@@ -1037,4 +1070,23 @@ body {
     font-size: 18px;
     cursor: help;
     opacity: 0.7;
+  }
+  .material-icons{
+      color: #35d398;
+      font-family: 'Material Icons Round';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  }
+  .fas, .far {
+      color: #35d398;
   }

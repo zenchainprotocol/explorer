@@ -25,7 +25,7 @@ export default class Transaction extends Component{
         
         if (this.props.loading){
             return <Container id="transaction">
-                <Spinner type="grow" color="primary" />
+                <Spinner type="border" color="primary" />
             </Container>
         }
         else{

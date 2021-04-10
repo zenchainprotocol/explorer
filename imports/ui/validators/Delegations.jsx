@@ -48,7 +48,7 @@ export default class ValidatorDelegations extends Component{
 
     render(){
         if (this.state.loading){
-            return <div><Spinner type="grow" color="primary"/></div>
+            return <div><Spinner type="border" color="primary"/></div>
         }
         else{
             return <Card>
