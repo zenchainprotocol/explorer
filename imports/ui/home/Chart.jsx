@@ -97,9 +97,9 @@ export default class Chart extends Component{
                             lineTension: 0,
                             yAxisID: 'Time',
                             pointRadius: 1,
-                            borderColor: 'rgba(189,28,8,0.5)',
+                            borderColor: '#35d398',
                             borderJoinStyle: 'round',
-                            backgroundColor: 'rgba(255,103,109,0.5)',
+                            backgroundColor: '#35d398',
                             data: timeDiff,
                             tooltips: {
                                 callbacks: {

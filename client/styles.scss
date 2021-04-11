@@ -30,6 +30,10 @@ $primary: #35d398 !default;
     box-shadow: 0 0 50px 0 #523f6926;
     border: none;
 }
+p.lead{
+    font-size: 1rem;
+    font-weight: bold;
+}
 ///end
 
 body {
@@ -629,8 +633,16 @@ body {
     }
   }
   
-  .activity .card-body p {
-    margin-bottom: 0;
+  .activity  {
+    .card{
+        box-shadow: none;
+    }
+    .card-body{
+        p{
+            margin-bottom: 0;
+        }
+    }
+       
   }
   
   div.transactions-list div.tx-info .activity .card-body ul {
