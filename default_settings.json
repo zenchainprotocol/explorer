@@ -38,8 +38,8 @@
         "coingeckoId": "cosmos"
     },
     "remote":{
-        "rpc":"https://26657-jade-marten-71vmmram.ws-us03.gitpod.io/",
-        "api":"https://1317-jade-marten-71vmmram.ws-us03.gitpod.io/"
+        "rpc":"http://45.63.22.19:26657",
+        "api":"http://45.63.22.19:1317"
     },
     "debug": {
         "startTimer": true
