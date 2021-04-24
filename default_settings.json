@@ -35,7 +35,7 @@
             "gov": true,
             "distribution": false
         },
-        "coingeckoId": "cosmos"
+        "coingeckoId": "zenchain"
     },
     "remote":{
         "rpc":"http://45.63.22.19:26657",
