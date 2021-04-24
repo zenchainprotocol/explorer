@@ -17,6 +17,8 @@ CURRENTUSERPUBKEY = 'ledgerUserPubKey';
 // import { onPageLoad } from 'meteor/server-render';
 
 Meteor.startup(() => {
+    import keplr from './libs/keplr';
+
     render(<Router><App /></Router>, document.getElementById('app'));
     // render(<Header />, document.getElementById('header'));
 
