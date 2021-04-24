@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import {Pie} from 'react-chartjs-2';
-import { Row, Col, Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button, Progress, Spinner } from 'reactstrap';
+import { Pie } from 'react-chartjs-2';
+import {
+    Row, Col, Card, CardImg, CardText, CardBody,
+    CardTitle, CardSubtitle, Button, Progress, Spinner
+} from 'reactstrap';
 import numbro from 'numbro';
 import i18n from 'meteor/universe:i18n';
 import SentryBoundary from '../components/SentryBoundary.jsx';
 
 const T = i18n.createComponent();
-export default class TwentyEighty extends Component{
-    constructor(props){
+export default class TwentyEighty extends Component {
+    constructor(props) {
         super(props);
         this.state = {
             data: {},
@@ -16,17 +18,17 @@ export default class TwentyEighty extends Component{
         }
     }
 
-    componentDidUpdate(prevProps){
-        if (prevProps.stats != this.props.stats){
-            let topPercent = this.props.stats.topTwentyPower/this.props.stats.totalVotingPower;
-            let bottomPercent = this.props.stats.bottomEightyPower/this.props.stats.totalVotingPower;
+    componentDidUpdate(prevProps) {
+        if (prevProps.stats != this.props.stats) {
+            let topPercent = this.props.stats.topTwentyPower / this.props.stats.totalVotingPower;
+            let bottomPercent = this.props.stats.bottomEightyPower / this.props.stats.totalVotingPower;
 
             this.setState({
-                data:{
+                data: {
                     labels:
                         [
-                            "Top 20% ("+this.props.stats.numTopTwenty+") validators",
-                            "Rest 80% ("+this.props.stats.numBottomEighty+") validators"
+                            "Top 20% (" + this.props.stats.numTopTwenty + ") validators",
+                            "Rest 80% (" + this.props.stats.numBottomEighty + ") validators"
                         ]
                     ,
                     datasets: [
@@ -36,22 +38,24 @@ export default class TwentyEighty extends Component{
                                 bottomPercent
                             ],
                             backgroundColor: [
-                                '#bd081c',
-                                '#ff63c0'
+                                '#35d398',
+                                '#f8961e'
                             ],
                             hoverBackgroundColor: [
-                                '#bd081c',
-                                '#ff63c0'
-                            ]
+                                '#00ffa0',
+                                '#ffa83e'
+                            ],
+                            borderWidth: 1,
                         }
                     ]
                 },
-                options:{
+                options: {
+
                     tooltips: {
                         callbacks: {
-                            label: function(tooltipItem, data) {
+                            label: function (tooltipItem, data) {
                                 var label = data.labels[tooltipItem.index] || '';
-            
+
                                 if (label) {
                                     label += ' hold ';
                                 }
@@ -66,22 +70,22 @@ export default class TwentyEighty extends Component{
         }
     }
 
-    render(){
-        if (this.props.loading){
+    render() {
+        if (this.props.loading) {
             return <Spinner type="border" color="primary" />
         }
-        else{
-            if (this.props.statsExist && this.props.stats){
-                return (                    
+        else {
+            if (this.props.statsExist && this.props.stats) {
+                return (
                     <Card>
                         <div className="card-header"><T>votingPower.pareto</T></div>
                         <CardBody>
                             <SentryBoundary><Pie data={this.state.data} options={this.state.options} /></SentryBoundary>
                         </CardBody>
                     </Card>
-                );   
+                );
             }
-            else{
+            else {
                 return <div></div>
             }
         }
