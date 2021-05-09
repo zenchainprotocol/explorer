@@ -648,7 +648,8 @@ Meteor.methods({
                                     if (validator.description && validator.description.identity){
                                         let profileUrl = getValidatorProfileUrl(validator.description.identity)
                                         if (profileUrl) {
-                                            bulkValidators.find({address: validator.address}).upsert().updateOne({$set:{'profile_url':profileUrl}});
+                                            Validators.update({address: validator.address},{$set:{'profile_url':profileUrl}});
+                                            //bulkValidators.find({address: validator.address}).upsert().updateOne({$set:{'profile_url':profileUrl}});
                                         }    
                                     }
                                 } catch (e) {
